@@ -1,3 +1,4 @@
+//question
 #include <iostream>
 using namespace std;
 class Timeconveter
@@ -22,4 +23,42 @@ int main()
     cin >> t1.seconds;
 
     t1.display();
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+class TimeConverter {
+public:
+    int hours, minutes, seconds;
+
+    void input() {
+        cout << "Enter hours: ";
+        cin >> hours;
+
+        cout << "Enter minutes: ";
+        cin >> minutes;
+
+        cout << "Enter seconds: ";
+        cin >> seconds;
+    }
+
+    void totalSeconds() {
+        int total;
+
+ total = (hours * 3600) + (minutes * 60) + seconds;        
+
+        cout << "\nTotal seconds: " << total;
+    }
+};
+
+int main() {
+    TimeConverter t;
+
+    t.input();
+    t.totalSeconds();
+
+    return 0;
 }
