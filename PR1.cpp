@@ -25,8 +25,8 @@ int main() {
     Time t1;
     int number;
 
-    cout << "Press 1: Seconds → HH:MM:SS" << endl;
-    cout << "Press 2: HH:MM:SS → Seconds" << endl;
+    cout << "Press 1: Seconds --> HH:MM:SS" << endl;
+    cout << "Press 2: HH:MM:SS --> Seconds" << endl;
 
     cin >> number;
 
