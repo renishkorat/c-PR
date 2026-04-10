@@ -1,4 +1,5 @@
 #include <iostream>
+#include<cstring>
 using namespace std;
 
 class Train
@@ -37,46 +38,23 @@ public:
 
     void setTrainName(char name[])
     {
-        int i = 0;
-        while (name[i] != '\0')
-        {
-            trainname[i] = name[i];
-            i++;
-        }
-        trainname[i] = '\0';
+         strcpy(trainname, name);
     }
 
     void setSource(char src[])
     {
-        int i = 0;
-        while (src[i] != '\0')
-        {
-            source[i] = src[i];
-            i++;
-        }
-        source[i] = '\0';
+        strcpy(source, src);
     }
 
     void setDestination(char dest[])
     {
-        int i = 0;
-        while (dest[i] != '\0')
-        {
-            destination[i] = dest[i];
-            i++;
-        }
-        destination[i] = '\0';
+        strcpy(destination, dest);
     }
+    
 
     void setTrainTime(char time[])
     {
-        int i = 0;
-        while (time[i] != '\0')
-        {
-            traintime[i] = time[i];
-            i++;
-        }
-        traintime[i] = '\0';
+        strcpy(traintime, time);
     }
 
     // Get Methods
@@ -204,7 +182,11 @@ int main()
     RailwaySystem system;
     int choice, number;
 
-        while (true)
+    //  for(int i = 0; i < 5; i++){
+    //      system.addTrain();
+    //  }
+
+    while (true)
     {
         cout << "\n ----Railway Reservation System Menu----" << endl;
         cout << "1. Add New Train Record" << endl;
@@ -230,7 +212,7 @@ int main()
             cin >> number;
             system.searchTrainByNumber(number);
             break;
-
+            
         case 4:
             cout << "Exiting the system. Goodbye!" << endl;
             break;
