@@ -195,6 +195,7 @@ int main()
         cout << "4. Exit" << endl;
         cout << "Enter your choice :";
         cin >> choice;
+        cout<<endl;
 
         switch (choice)
         {
