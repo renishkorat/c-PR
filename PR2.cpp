@@ -182,10 +182,6 @@ int main()
     RailwaySystem system;
     int choice, number;
 
-    //  for(int i = 0; i < 5; i++){
-    //      system.addTrain();
-    //  }
-
     while (true)
     {
         cout << "\n ----Railway Reservation System Menu----" << endl;
