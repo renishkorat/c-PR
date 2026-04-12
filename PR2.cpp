@@ -212,7 +212,7 @@ int main()
             
         case 4:
             cout << "Exiting the system. Goodbye!" << endl;
-            break;
+             return 0;
 
         default:
             cout << "Invalid choice" << endl;
