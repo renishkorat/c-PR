@@ -184,7 +184,7 @@ int main()
 
     while (true)
     {
-        cout << "\n ----Railway Reservation System Menu----" << endl;
+        cout << "----Railway Reservation System Menu----" << endl;
         cout << "1. Add New Train Record" << endl;
         cout << "2. Display All Train Record" << endl;
         cout << "3. Search Train by Number" << endl;
