@@ -14,15 +14,7 @@ class Train
 
 public:
     // Default Constructor
-    Train()
-    {
-        trainnumber = 0;
-        trainname[0] = '\0';
-        source[0] = '\0';
-        destination[0] = '\0';
-        traintime[0] = '\0';
-        trainCount++; // new Train object
-    }
+    Train(){}
 
     // Destructor
     ~Train()
