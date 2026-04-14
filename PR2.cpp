@@ -14,15 +14,7 @@ class Train
 
 public:
     // Default Constructor
-    Train()
-    {
-        trainnumber = 0;
-        trainname[0] = '\0';
-        source[0] = '\0';
-        destination[0] = '\0';
-        traintime[0] = '\0';
-        trainCount++; // new Train object
-    }
+    Train(){}
 
     // Destructor
     ~Train()
@@ -185,7 +177,7 @@ int main()
 
     while (true)
     {
-        cout << "\n ----Railway Reservation System Menu----" << endl;
+        cout << "----Railway Reservation System Menu----" << endl;
         cout << "1. Add New Train Record" << endl;
         cout << "2. Display All Train Record" << endl;
         cout << "3. Search Train by Number" << endl;
@@ -213,7 +205,7 @@ int main()
 
         case 4:
             cout << "Exiting the system. Goodbye!" << endl;
-            break;
+             return 0;
 
         default:
             cout << "Invalid choice" << endl;
