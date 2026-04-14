@@ -1,5 +1,5 @@
 #include <iostream>
-#include<cstring>
+#include <cstring>
 using namespace std;
 
 class Train
@@ -38,7 +38,7 @@ public:
 
     void setTrainName(char name[])
     {
-         strcpy(trainname, name);
+        strcpy(trainname, name);
     }
 
     void setSource(char src[])
@@ -50,7 +50,6 @@ public:
     {
         strcpy(destination, dest);
     }
-    
 
     void setTrainTime(char time[])
     {
@@ -153,11 +152,13 @@ public:
             cout << "No train records available." << endl;
             return;
         }
-
-        for (int i = 0; i < totalTrains; i++)
+        else
         {
-            cout << "\nTrain " << i + 1 << " details:" << endl;
-            trains[i].displayTrainDetails();
+            for (int i = 0; i < totalTrains; i++)
+            {
+                cout << "\nTrain " << i + 1 << " details:" << endl;
+                trains[i].displayTrainDetails();
+            }
         }
     }
 
@@ -182,10 +183,6 @@ int main()
     RailwaySystem system;
     int choice, number;
 
-    //  for(int i = 0; i < 5; i++){
-    //      system.addTrain();
-    //  }
-
     while (true)
     {
         cout << "\n ----Railway Reservation System Menu----" << endl;
@@ -195,7 +192,7 @@ int main()
         cout << "4. Exit" << endl;
         cout << "Enter your choice :";
         cin >> choice;
-        cout<<endl;
+        cout << endl;
 
         switch (choice)
         {
@@ -213,7 +210,7 @@ int main()
             cin >> number;
             system.searchTrainByNumber(number);
             break;
-            
+
         case 4:
             cout << "Exiting the system. Goodbye!" << endl;
             break;
