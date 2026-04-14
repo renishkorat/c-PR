@@ -1,14 +1,14 @@
 #include <iostream>
-#include <cstring>
+#include <string>
 using namespace std;
 
 class Train
 {
     int trainnumber;
-    char trainname[50];
-    char source[50];
-    char destination[50];
-    char traintime[10];
+    string trainname;
+    string source;
+    string destination;
+    string traintime;
 
     static int trainCount;
 
@@ -28,24 +28,24 @@ public:
         trainnumber = num;
     }
 
-    void setTrainName(char name[])
+     void setTrainName(string name)
     {
-        strcpy(trainname, name);
+        trainname = name;
     }
 
-    void setSource(char src[])
+    void setSource(string src)
     {
-        strcpy(source, src);
+        source = src;
     }
 
-    void setDestination(char dest[])
+    void setDestination(string dest)
     {
-        strcpy(destination, dest);
+        destination = dest;
     }
 
-    void setTrainTime(char time[])
+    void setTrainTime(string time)
     {
-        strcpy(traintime, time);
+        traintime = time;
     }
 
     // Get Methods
@@ -54,22 +54,22 @@ public:
         return trainnumber;
     }
 
-    char *getTrainName()
+    string getTrainName()
     {
         return trainname;
     }
 
-    char *getSource()
+    string getSource()
     {
         return source;
     }
 
-    char *getDestination()
+    string getDestination()
     {
         return destination;
     }
 
-    char *getTrainTime()
+    string getTrainTime()
     {
         return traintime;
     }
@@ -172,12 +172,12 @@ public:
 
 int main()
 {
-    RailwaySystem system;
+    RailwaySystem t;
     int choice, number;
 
     while (true)
     {
-        cout << "----Railway Reservation System Menu----" << endl;
+        cout << "\n----Railway Reservation System Menu----" << endl;
         cout << "1. Add New Train Record" << endl;
         cout << "2. Display All Train Record" << endl;
         cout << "3. Search Train by Number" << endl;
@@ -190,17 +190,17 @@ int main()
         {
 
         case 1:
-            system.addTrain();
+            t.addTrain();
             break;
 
         case 2:
-            system.displayAllTrains();
+            t.displayAllTrains();
             break;
 
         case 3:
             cout << "Enter train number :";
             cin >> number;
-            system.searchTrainByNumber(number);
+            t.searchTrainByNumber(number);
             break;
 
         case 4:
