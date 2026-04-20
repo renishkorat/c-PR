@@ -7,7 +7,7 @@ protected:
     string accountHolderName;
     double balance;
 public:
-    BankAccount(int acc, string nAame, double bal) {
+    BankAccount(int acc, string name, double bal) {
         accountNumber = acc;
         accountHolderName = name;
         balance = bal;
