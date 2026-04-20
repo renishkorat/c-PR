@@ -41,17 +41,20 @@ public:
         return vehicleID;
     }
 
-    void inputBasic(int &id, string &manu, int &model, int &year)
-    {
-        cout << "Enter ID: ";
-        cin >> id;
-        cout << "Manufacturer: ";
-        cin >> manu;
-        cout << "Model: ";
-        cin >> model;
-        cout << "Year: ";
-        cin >> year;
-    }
+    void inputBasic()
+{
+    cout << "Enter ID: ";
+    cin >> vehicleID;
+
+    cout << "Manufacturer: ";
+    cin >> manufacturer;
+
+    cout << "Model: ";
+    cin >> model;
+
+    cout << "Year: ";
+    cin >> year;
+}
 
     virtual void display()
     {
@@ -238,7 +241,7 @@ int main()
             {
                 Car *c = new Car();
 
-                c->inputBasic(id, manu, model, year);
+                c->inputBasic();
 
                 cout << "Fuel Type: ";
                 cin >> fuel;
@@ -258,7 +261,7 @@ int main()
             {
                 ElectricCar *e = new ElectricCar();
 
-                e->inputBasic(id, manu, model, year);
+                e->inputBasic();
 
                 cout << "Fuel Type: ";
                 cin >> fuel;
@@ -294,7 +297,7 @@ int main()
             {
                 FlyingCar *f = new FlyingCar();
 
-                f->inputBasic(id, manu, model, year);
+                f->inputBasic();
 
                 cout << "Fuel Type: ";
                 cin >> fuel;
@@ -318,7 +321,7 @@ int main()
             {
                 SportsCar *s = new SportsCar();
 
-                s->inputBasic(id, manu, model, year);
+                s->inputBasic();
 
                 cout << "Fuel Type: ";
                 cin >> fuel;
@@ -346,7 +349,7 @@ int main()
             {
                 Sedan *s = new Sedan();
 
-                s->inputBasic(id, manu, model, year);
+                s->inputBasic();
 
                 cout << "Fuel Type: ";
                 cin >> fuel;
@@ -366,7 +369,7 @@ int main()
             {
                 SUV *s = new SUV();
 
-                s->inputBasic(id, manu, model, year);
+                s->inputBasic();
 
                 cout << "Fuel Type: ";
                 cin >> fuel;
