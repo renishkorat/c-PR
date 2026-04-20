@@ -111,6 +111,7 @@ int main() {
             break;
 
         case 6:
+            cout<<"Goodbye!"<<endl;
             return 0;
 
         default:
